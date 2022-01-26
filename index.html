@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSB Judicial Academy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/swiper-bundle.min.css">
 </head>
 <body class="bg-gray-100">
-  <header class="sticky top-0">
+  <header class="sticky top-0 z-50">
     <!-- navbar start -->
     <nav>
       <div class=" flex bg-zinc-50/95 backdrop-blur-lg lg:bg-white/50 text-black pr-5 pl-3 lg:backdrop-blur-sm">
@@ -61,10 +62,23 @@
         </div>
         </div>
       </div>
-      <!-- mobile menu end  -->
-      
+      <!-- mobile menu end  -->     
   </header>
+
       <main>
+          <!--Swiper.js Start--> 
+          <div class="swiper mySwiper h-full w-full">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide"><img class="w-full" src="http://www.hcmadras.tn.nic.in/image/Chennai_High_Court_new.jpg" alt=""></div>
+              <div class="swiper-slide"><img class="w-full" src="http://www.hcmadras.tn.nic.in/image/A_building_in_Chennai.JPG" alt=""></div>
+              <div class="swiper-slide"><img class="w-full" src="http://www.hcmadras.tn.nic.in/image/banner1.jpg" alt=""></div>
+            
+            </div>
+            <div class="z-0 swiper-button-next"></div>
+            <div class="z-0 swiper-button-prev"></div>
+            <div class="z-0 swiper-pagination"></div>
+          </div>    
+          <!--Swiper.js End-->      
           <!--firm start-->
     <div id="firmsProfile" class="bg-white shadow-lg rounded-xl md:mx-20 md:my-6 m-6 grid place-items-center">
       <div class="lg:flex items-center ">
@@ -133,7 +147,7 @@
     <!--mission vission End-->
     
       </main>
-
+      <script src="./assets/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     </body>
 </html>
