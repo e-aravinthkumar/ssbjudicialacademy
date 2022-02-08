@@ -1,3 +1,4 @@
+//sidebar
 let menuButton = document.querySelector('#menu-bar');
   let sideBar = document.querySelector('#sideBar');
   let overlay = document.querySelector('#overlay');
@@ -30,7 +31,28 @@ let menuButton = document.querySelector('#menu-bar');
     topBar.classList.remove('hidden');
     console.log(1);
   });
-  //Swiper
+
+
+
+//theme
+document.getElementById('switchTheme').addEventListener('click', function() {
+        let htmlClasses = document.querySelector('html').classList;
+        if(localStorage.theme == 'dark') {
+            htmlClasses.remove('dark');
+            localStorage.removeItem('theme')
+        } else {
+            htmlClasses.add('dark');
+            localStorage.theme = 'dark';
+        }
+    });
+
+    if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('html').classList.add('dark')
+    } else if (localStorage.theme === 'dark') {
+        document.querySelector('html').classList.add('dark')
+    }
+
+    //swiper
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,

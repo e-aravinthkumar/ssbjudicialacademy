@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firm's profile</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="sticky top-0 z-50">
+        <!-- navbar start -->
+        <nav class=" border-b-2 border-black">
+            <div class=" flex bg-zinc-50/95 backdrop-blur-lg lg:bg-white/50 text-black pr-5 pl-3 lg:backdrop-blur-sm">
+                <div class="flex items-center">
+                    <div class="flex justify-center items-center">
+                        <div id="menu-bar" class="lg:hidden px-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <img class="w-[60px] "
+                            src="https://zeevector.com/wp-content/uploads/LOGO/Advocate-Logo-PNG-Download.png" alt="">
+                    </div>
+                    <p class="text-black font-extrabold sm:text-base text-sm">SSB LAW ASSOCIATES</p>
+                </div>
+                <div class="hidden lg:block ml-auto backdrop-blur-shadow-sm">
+                    <ul class="py-6 px-3 flex text-center items-center gap-5 text-white font-semibold">
+                        <li class="bg-black/70 rounded-md px-2 py-1"><a href="index.html">Home</a></li>
+                        <li class="bg-black/70 rounded-md px-2 py-1"><a href="#firmsProfile ">Firm's Profile</a></li>
+                        <li class="bg-black/70 rounded-md px-2 py-1"><a href="#">Our Services</a></li>
+                        <li class="bg-black/70 rounded-md px-2 py-1"><a href="#">Publications</a></li>
+                        <li class="bg-black/70 rounded-md px-2 py-1"><a href="#">Careers</a></li>
+                        <li class="bg-black/70 rounded-md px-2 py-1"><a href="#">Contact</a></li>
+                        <li class="dark:bg-black/70 rounded-md px-2 py-1 text-black">
+                            <input class="absolute opacity-0" type="radio" value="dark" name="theme" id="dark">
+                            <for class="border-2 border-blue-500 rounded-lg px-2 py-1 select-none cursor-pointer">Dark</for>
+                            <input class="absolute opacity-0" type="radio" value="light" name="theme" id="light">
+                            <for class="border-2 border-blue-500 rounded-lg px-2 py-1 select-none cursor-pointer">Light
+                            </for>
+                            <input class="absolute opacity-0" type="radio" value="system" name="theme" id="system">
+                            <for class="border-2 border-blue-500 rounded-lg px-2 py-1 select-none cursor-pointer">System
+                            </for>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+        <!-- mobile menu -->
+        <div class="hidden fixed z-50 inset-0 overflow-y-auto " id="topBar" role="dialog" aria-modal="true">
+            <div class="hidden z-60 fixed inset-0  backdrop-blur-sm bg-gray-200/95" id="overlay" aria-hidden="true"></div>
+            <div
+                class="transition-all ease-in-out duration-500 z-70 relative bg-white h-screen w-80 max-w-[calc(100%-3rem)] p-6">
+                <div id="close-menu" class="pl-1 pb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class=" grid justify-center">
+                    <div class="flex justify-center"><img class="lg:w-[100px] w-[60px]"
+                            src="https://zeevector.com/wp-content/uploads/LOGO/Advocate-Logo-PNG-Download.png" alt=""></div>
+                    <p class=" font-semibold">SSB LAW ASSOCIATES</p>
+                </div>
+                <div>
+                    <ul class="py-6 px-3 grid text-center justify-center gap-5 font-semibold">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./firm's_profile.html">Firm's Profile</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu end  -->
+    </header>
+    <main>
+        <!--firm start-->
+        <section class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="mx-2 bg-white rounded-lg shadow-lg p-4 grid gap-5 row-gap-8 lg:grid-cols-2 lg:flex">
+                <div class="flex md:justify-start justify-center p-5">
+                    <img class=" w-56  h-full rounded shadow-lg " src="./img/person.jfif" alt="" />
+                </div>
+                <div class="flex flex-col sm:justify-start justify-center px-2 mt-5">
+                    <div class="max-w-xl mb-6">
+                        <div
+                            class="max-w-sm mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                            <h2 class="">
+                                Mr. Name Here
+                            </h2>
+                            <p class="text-left text-base font-normal">Advocate</p>
+                        </div>
+                        <p class="text-base text-gray-700 md:text-lg">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nobis necessitatibus blanditiis,
+                            facere laborum consequatur atque beatae in minus error alias saepe porro commodi natus dolores autem
+                            officiis iusto quis culpa voluptate impedit delectus magnam. Quam odit deserunt voluptas nesciunt
+                            expedita quas obcaecati recusandae ad libero, explicabo sint, temporibus possimus.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        <section class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="mx-2 bg-white rounded-lg shadow-lg p-4 grid gap-5 row-gap-8 lg:grid-cols-2 lg:flex">
+                <div class="flex md:justify-start justify-center p-5">
+                    <img class=" w-56  h-full rounded shadow-lg " src="./img/person.jfif" alt="" />
+                </div>
+                <div class="flex flex-col sm:justify-start justify-center px-2 mt-5">
+                    <div class="max-w-xl mb-6">
+                        <div
+                            class="max-w-sm mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                            <h2 class="">
+                                Mr. Name Here
+                            </h2>
+                            <p class="text-left text-base font-normal">Advocate</p>
+                        </div>
+                        <p class="text-base text-gray-700 md:text-lg">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nobis necessitatibus blanditiis,
+                            facere laborum consequatur atque beatae in minus error alias saepe porro commodi natus dolores autem
+                            officiis iusto quis culpa voluptate impedit delectus magnam. Quam odit deserunt voluptas nesciunt
+                            expedita quas obcaecati recusandae ad libero, explicabo sint, temporibus possimus.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        <section class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="mx-2 bg-white rounded-lg shadow-lg p-4 grid gap-5 row-gap-8 lg:grid-cols-2 lg:flex">
+                <div class="flex md:justify-start justify-center p-5">
+                    <img class=" w-56  h-full rounded shadow-lg " src="./img/person.jfif" alt="" />
+                </div>
+                <div class="flex flex-col sm:justify-start justify-center px-2 mt-5">
+                    <div class="max-w-xl mb-6">
+                        <div
+                            class="max-w-sm mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                            <h2 class="">
+                                Mr. Name Here
+                            </h2>
+                            <p class="text-left text-base font-normal">Advocate</p>
+                        </div>
+                        <p class="text-base text-gray-700 md:text-lg">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet nobis necessitatibus blanditiis,
+                            facere laborum consequatur atque beatae in minus error alias saepe porro commodi natus dolores autem
+                            officiis iusto quis culpa voluptate impedit delectus magnam. Quam odit deserunt voluptas nesciunt
+                            expedita quas obcaecati recusandae ad libero, explicabo sint, temporibus possimus.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        
+        <!--firm end-->
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
