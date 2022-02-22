@@ -7,19 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./assets/swiper-bundle.min.css">
-    <!-- <script src="./assets/alpinejs.intersect.js"></script>
-    <script defer src="./assets/alpinejs.min.js"></script> -->
-    <!-- Alpine Plugins -->
-    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- Alpine Core -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="./bundle.js"></script>
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 dark:text-gray-50" x-data>
     <header class="sticky top-0 z-50">
-        <nav class="border-b-2 border-gray-800 dark:border-gray-200 bg-white dark:bg-gray-900">
+        <nav class="bor der-b-2 border-gray-800 dark:border-gray-200 bg-white dark:bg-gray-900">
             <div class="max-w-7xl mx-auto flex items-center w-full justify-between">
                 <div class="mr-auto flex items-center px-2 dark:text-white">
                     <div id="menu-bar" class="lg:hidden px-3">
@@ -34,12 +27,12 @@
                     <p class="text-black dark:text-white font-extrabold sm:text-base text-sm">SSB LAW ADVOCATES</p>
                 </div>
                 <div class="flex items-center ml-auto">
-                    <a href="#" class="hidden lg:block px-4 dark:text-white">Home</a>
+                    <a href="./index.html" class="hidden lg:block px-4 dark:text-white">Home</a>
                     <a href="./firm's_profile.html" class="hidden lg:block px-4 dark:text-white">Firm's Profile</a>
                     <a href="#" class="hidden lg:block px-4 dark:text-white">Our Services</a>
-                    <a href="#" class="hidden lg:block px-4 dark:text-white">Publications</a>
-                    <a href="#" class="hidden lg:block px-4 dark:text-white">Careers</a>
-                    <a href="#" class="hidden lg:block px-4 dark:text-white">Contact</a>
+                    <a href="./publications.html" class="hidden lg:block px-4 dark:text-white">Publications</a>
+                    <a href="./careers.html" class="hidden lg:block px-4 dark:text-white">Careers</a>
+                    <a href="./contact.html" class="hidden lg:block px-4 dark:text-white">Contact</a>
                     <span id="switchTheme"
                         class="h-10 w-10 flex justify-center items-center focus:outline-none text-yellow-500">
                         <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20"
@@ -77,21 +70,289 @@
                 </div>
                 <div>
                     <ul class="py-6 px-3 grid text-center justify-center gap-5 font-semibold">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="./firm's_profile.html">Firm's Profile</a></li>
                         <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Publications</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./publications.html">Publications</a></li>
+                        <li><a href="./careers.html">Careers</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- mobile menu end  -->
     </header>
-    <main>
-        <h1>our Services</h1>
-    </main>
+    <main class="px-5">
+        <h1 class="text-center font-extrabold text-2xl px-2 py-6 mb-3" >Our Services
+        </h1>
+        <div x-data="accordion" class=" max-w-2xl w-full gap-x-6 space-y-12 mx-auto ">
+           
+            <!-- Accordion 1 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 1 ? selected = 1 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 1? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 1 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 2 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 2 ? selected = 2 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 2? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 2 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 3 -->
+            <div class="w-fll text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 3 ? selected = 3 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 3? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 3 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 4 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 4 ? selected = 4 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 4? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 4 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 5 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 5 ? selected = 5 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 5? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 5 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 6 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 6 ? selected = 6 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 6? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 6 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 7 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 7 ? selected = 7 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 7? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 7 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 8 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 8 ? selected = 8 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 8? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 8 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 9 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 9 ? selected = 9 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 9? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 9 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 10 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 10 ? selected = 10 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 10? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 10 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 11-->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 11 ? selected = 11 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 11? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 11 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            <!-- Accordion 12 -->
+            <div class="w-full text-white bg-gray-800 dark:text-gray-800 dark:bg-gray-100 shadow-md rounded-md">
+                <!-- Head -->
+                <div @click="selected != 12 ? selected = 12 : selected =null" class="flex items-center shadow-md px-2">
+                    <img class="w-16 p-2" src="./img/svg/Buildings.svg" alt="">
+                    <h1 class="font-medium  py-2">Property Litigation</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" x-bind:class="selected == 12? 'transform rotate-180':''"
+                        class="h-5 w-5 transition-all duration-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- Content -->
+                <div class="rounded-b-md bg-white text-gray-800 dark:bg-slate-800 dark:text-white max-h-0 overflow-hidden transition-all duration-300"
+                    x-ref="tab1" :style="selected == 12 ? 'max-height: '+ $refs.tab1.scrollHeight+ 'px;':''">
+                    <p class="p-8 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, neque ipsam
+                        ullam ad illo
+                        vero
+                        repellendus cumque exercitationem aperiam fugit totam tempora facere repudiandae nemo modi quod
+                        perferendis odio minus.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script>
+            function accordion() {
+                return {
+                    selected: null
+                }
+            }
+
+            function collapseIt(){
+                console.log(document.querySelectorAll(".collapseDiv"));     
+            }
+        </script>
     <script src="./script.js"></script>
     </body>
     </html>

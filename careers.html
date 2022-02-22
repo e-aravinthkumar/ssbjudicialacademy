@@ -60,14 +60,12 @@
               class="hidden lg:block px-4 dark:text-white"
               >Our Services</a
             >
-            <a href="#" class="hidden lg:block px-4 dark:text-white"
+            <a
+              href="./publications.html"
+              class="hidden lg:block px-4 dark:text-white"
               >Publications</a
             >
-            <a
-              href="./careers.html"
-              class="hidden lg:block px-4 dark:text-white"
-              >Careers</a
-            >
+            <a href="#" class="hidden lg:block px-4 dark:text-white">Careers</a>
             <a
               href="./contact.html"
               class="hidden lg:block px-4 dark:text-white"
@@ -149,8 +147,8 @@
               <li><a href="./index.html">Home</a></li>
               <li><a href="./firm's_profile.html">Firm's Profile</a></li>
               <li><a href="./our_services.html">Our Services</a></li>
-              <li><a href="#">Publications</a></li>
-              <li><a href="./careers.html">Careers</a></li>
+              <li><a href="./publications.html">Publications</a></li>
+              <li><a href="#">Careers</a></li>
               <li><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
@@ -161,8 +159,77 @@
 
     <main>
       <h1 class="text-center font-extrabold text-2xl px-2 py-6 mb-3">
-        Publications
+        Careers
       </h1>
+      <section class="grid place-content-center">
+        <form id="cform" class="max-w-2xl" action="">
+          <div class="grid sm:grid-cols-2 gap-4 px-3 py-1">
+            <span class="flex flex-col">
+              <label for="cname">Name</label>
+              <input
+                class="form-input dark:text-black"
+                type="text"
+                id="cname"
+              />
+            </span>
+            <span class="flex flex-col">
+              <label for="cmobile">Mobile No</label>
+              <input
+                class="form-input dark:text-black"
+                type="number"
+                id="cmobile"
+              />
+            </span>
+            <span class="flex flex-col">
+              <label for="cmail">Email</label>
+              <input
+                class="form-input dark:text-black"
+                type="email"
+                id="cmail"
+              />
+            </span>
+            <span class="flex flex-col">
+              <label for="desigination">Desigination</label>
+              <select class="form-select dark:text-black" id="desigination">
+                <option value="Desigination">Desigination</option>
+                <option value="Advocate">Advocate</option>
+                <option value="Clerk">Clerk</option>
+                <option value="Junior Advocate">Junior Advocate</option>
+              </select>
+            </span>
+            <span class="flex flex-col sm:col-span-2">
+              <label for="addrs">Address</label>
+              <textarea
+                class="dark:text-black outline outline-offset-2 outline-gray-600 outline-1 focus:outline-2 focus:outline-blue-600"
+                name=""
+                id=""
+                cols="15"
+                rows="5"
+              ></textarea>
+            </span>
+            <span class="col-span-2 flex flex-col">
+              <label for="resume">Resume</label>
+              <input
+                class="dark:text-black form-input"
+                type="file"
+                id="resume"
+              />
+            </span>
+            <span class="col-span-2 flex justify-center text-white">
+              <input
+                class="bg-blue-500 px-2 mx-2 py-1 rounded-lg w-24"
+                type="submit"
+                value="Apply"
+              />
+              <input
+                class="bg-blue-500 px-2 mx-2 py-1 rounded-lg w-24"
+                type="reset"
+                value="Reset"
+              />
+            </span>
+          </div>
+        </form>
+      </section>
     </main>
     <script src="./script.js"></script>
   </body>
